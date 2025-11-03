@@ -68,3 +68,37 @@ figure {
 .content__text-block .content__paragraph:not(:last-child) {
   margin-bottom: 1.5em;
 }
+
+.content__blockquote {
+  font-style: italic;
+  line-height: 2;
+  max-width: 75%;
+  margin: 0 auto 1.5em;
+}
+
+.content__list {
+  list-style: none;
+  padding-inline-start: 40px;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.content__list-item::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  left: -25px;
+  top: calc((100% - 15px) / 2);
+  background-image: url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
