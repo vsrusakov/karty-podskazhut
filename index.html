@@ -22,14 +22,16 @@
         </div>
         <ul class="header__theme-toggler">
           <li class="header__theme-item">
-            <button class="header__theme-button header__theme-button_type_dark">
+            <button
+              class="header__theme-button header__theme-button_type_dark header__theme-button_is-active"
+              disabled
+            >
               Тёмная
             </button>
           </li>
           <li class="header__theme-item">
             <button
-              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
-              disabled
+              class="header__theme-button header__theme-button_type_light"
             >
               Светлая
             </button>
@@ -158,9 +160,11 @@
         </ul>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__copyright">VЁRSTKA</p>
+    </footer>
 
     <!-- Раскомментируйте строчку ниже, когда вёрстка будет готова. Если вы назвали все классы. как нужно, переключатель темы будет работать -->
-    <!-- <script src="./scripts/theme-changer.js"></script> -->
+    <script src="./scripts/theme-changer.js"></script>
   </body>
 </html>

@@ -20,6 +20,12 @@
   font-family: var(--main-font, sans-serif);
 }
 
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #B3B3B3;
+  --accent-color: transparent;
+}
+
 p,
 h1,
 h2,
@@ -36,6 +42,10 @@ figure {
   color: currentColor;
   text-decoration: underline solid currentColor 1px;
   text-underline-offset: 2px;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 .heading {
@@ -81,12 +91,20 @@ figure {
   color: currentColor;
   background-color: transparent;
   border: none;
-  padding: 0;
+  padding: 1px 5px 3px;
 }
 
 .header__theme-button:hover {
   cursor: pointer;
   text-decoration: underline solid currentColor 1px;
+}
+
+.header__theme-button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.header__theme-button:disabled {
+  pointer-events: none;
 }
 
 /* .header__theme-button_type_dark */
@@ -100,12 +118,16 @@ figure {
 .header__theme-button_is-active::after {
   content: '';
   position: absolute;
-  inline-size: 110%;
+  inline-size: 100%;
   block-size: 6px;
-  left: -5%;
+  left: 0;
   top: calc(1em / 2 + 4px);
   z-index: -1;
   background-color: var(--accent-color, #FFAB6B);
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(../images/pattern.svg);
 }
 
 .content__title {
@@ -125,6 +147,10 @@ figure {
   font-size: 200%;
   font-weight: 700;
   background-color: var(--accent-color, #FFAB6B);
+}
+
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
+  border: 1px solid currentColor;
 }
 
 .content__text-block .content__paragraph:not(:last-child) {
@@ -186,6 +212,10 @@ figure {
   background-color: var(--accent-color, #FFAB6B);
 }
 
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);
+}
+
 .content__card-subtitle {
   font-size: 18px;
   text-align: center;
@@ -216,4 +246,19 @@ figure {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.theme_dark .content__list-item::before {
+  background-image: url(../images/marker-dark.svg);
+}
+
+.footer {
+  margin-top: 10%;
+  padding: 2.5%;
+  border-top: 1px solid currentColor;
+}
+
+.footer__copyright {
+  font-size: 18px;
+  text-align: center;
 }
