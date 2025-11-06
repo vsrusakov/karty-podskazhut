@@ -102,6 +102,42 @@ figure {
   margin: 0 auto 1.5em;
 }
 
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid currentColor;
+}
+
+.content__card-title {
+  font-size: 60px;
+  width: 90%;
+}
+
+.colored-text {
+  white-space: nowrap;
+  position: relative;
+}
+
+.colored-text::after {
+  content: '';
+  position: absolute;
+  inline-size: 220px;
+  block-size: 0.25em;
+  left: -3px;
+  top: calc(1em / 2 + 4px);
+  z-index: -1;
+  background-color: var(--accent-color, #FFAB6B);
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+  text-align: center;
+}
+
 .content__list {
   list-style: none;
   padding-inline-start: 40px;
