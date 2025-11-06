@@ -78,6 +78,23 @@ figure {
   margin-bottom: 1.5em;
 }
 
+.content__figure {
+  position: relative;
+  left: -5vi;
+  margin: 7% 0;
+  width: calc(100% + 5vi + 5vi);
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.content__picture-caption {
+  border-bottom: 1px solid currentColor;
+  text-align: center;
+  padding: 20px;
+}
+
 .content__blockquote {
   font-style: italic;
   line-height: 2;
